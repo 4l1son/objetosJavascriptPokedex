@@ -1,0 +1,172 @@
+*************Basico de objeto*************
+
+
+Objeto é o que antecede meu método
+
+Objeto  é definido como coleção de valores que funciona através de chave e valores
+
+Exemplo - Objeto pessoa com o método nome e idade
+
+const pessoa = {
+	nome: 'alisson',
+	idade: 25
+};
+console.log(pessoa);
+console.log(pessoa.nome);
+console.log(pessoa.idade);
+
+Incrementa dinamicamente
+
+É uma edição do meu objeto , adicionar ou deletar
+
+********Exemplo - Adicionar*********
+
+const pessoa = {
+	nome: 'alisson',
+	idade: 25
+};
+
+pessoa.altura = 1.81;
+console.log(pessoa)
+
+*********Exemplo - Deletar****************
+
+const pessoa = {
+	nome: 'alisson',
+	idade: 25
+};
+
+pessoa.altura = 1.81;
+
+delete pessoa.nome
+
+console.log(pessoa)
+
+
+******************************************
+No objeto conseguimos utilizar funções 
+e a função dentro do objeto é chamado de método
+
+dentro de um obejeto eu ja posso usar aqueles valores 
+se estiver dentro de uma função podemos usar o this que é o contexto 
+da onde eu estou pegando aqueles valores
+
+Exemplo :
+
+const pessoa = {
+	nome: 'alisson',
+	idade: 25,
+
+	descrever: function () {
+		console.log(`Meu nome eh ${this.nome} e minha idade eh ${this.idade}`);
+	}
+};
+
+pessoa.altura = 1.81;
+
+pessoa.descrever() 
+
+--Eu posso alterar esses valores dinamicamente para sair o que quero utilizando aquela função
+
+Exemplo:
+const pessoa = {
+	nome: 'alisson',
+	idade: 25,
+
+	descrever: function () {
+		console.log(`Meu nome eh ${this.nome} e minha idade eh ${this.idade}`);
+	}
+};
+
+pessoa.nome = 'Giovanna';
+pessoa.idade = 21
+
+pessoa.descrever()
+ 
+
+-Pode se tambem substituir funções dinamicamente
+
+const pessoa = {
+	nome: 'alisson',
+	idade: 25,
+
+	descrever: function () {
+		console.log(`Meu nome eh ${this.nome} e minha idade eh ${this.idade}`);
+	}
+};
+
+pessoa.nome = 'Giovanna';
+pessoa.idade = 21
+
+pessoa.descrever = function() {
+	console.log(`Meu nome eh ${this.nome}`)
+}
+
+pessoa.descrever() 
+
+
+Acessando diretamente um método
+
+const pessoa = {
+	nome: 'alisson',
+	idade: 25,
+
+	descrever: function () {
+		console.log(`Meu nome eh ${this.nome} e minha idade eh ${this.idade}`);
+	}
+};
+
+const atributo = 'idade';
+console.log(pessoa[atributo]);
+
+*************************************
+classe é a definição de algo
+e a instancia eh a ocorrencia de como aquilo deveria ser
+
+Exemplo - Eu posso colocar a classe para definir
+novas pessoas atraves das instancias
+
+class pessoa{
+	nome;
+	idade;
+	descrever(){
+		console.log(`Meu nome eh ${this.nome} e minha idade eh ${this.idade}`);
+
+	}
+}
+
+
+const alisson = new pessoa();
+alisson.nome = 'Alisson dos santos';
+alisson.idadde = 21
+
+console.log(alisson)
+alisson.descrever()
+
+******************
+Constructor é o que ocorre quando algo eh instanciado
+para modelar algo
+
+Exemplo:
+
+class pessoa{
+	nome;
+	idade;
+
+	constructor(nome,idade){
+		this.nome = nome;
+		this.idade = idade;
+
+	}
+
+
+	descrever(){
+		console.log(`Meu nome eh ${this.nome} e minha idade eh ${this.idade}`);
+
+	}
+}
+
+
+const alisson = new pessoa('alisson',21);
+console.log(alisson)
+alisson.descrever()

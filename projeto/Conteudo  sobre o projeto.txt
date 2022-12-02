@@ -1,0 +1,56 @@
+*****NORMALIZE CSS******
+
+O Normalize é uma folha de estilos que deve ser importado antes de qualquer 
+estilização no projeto. Ele deve ser o primeiro arquivo CSS a ser importado no projeto.
+ 
+É importante "limpar" primeiro o projeto antes de começar a desenvolver.
+
+******CDN É USADO NA FONTE TAMBEM**********
+
+Mobilie first isso evita ter que reescrever o código para deixar a tela recursiva
+
+*Dev tools consegue simular o formato da tela
+
+rem eh baseado no tamanho da fonte se o espac
+
+***********INTRODUÇÃO A APIS ***************
+
+Uma api é um servidor que esta servindo dados para o usuario
+
+****VOCE faz uma requisição e ela devolve algo
+
+FUNCIONAMENTO DAS REQUISIÇÕES
+
+O protocolo http é um protocolo cliente servidor , o cliente faz um pedido
+ e o servidor devolve uma resposta
+
+GET - Seleciona
+Post - Insere
+Put - Atualiza
+Delete - Apagar
+
+STATUS CODE 200: Sucesso , deu tudo certo.
+
+
+Na montagem de uma requisição http temos 
+primeiro o nosso path a url que vai dizer o ip e porta do servidor 
+
+
+***O endereço do recurso
+
+A url é composta de ip / path - Caminho de identificação de recurso
+
+O dominio é convertido para o ip no servidor 
+
+O PATH é uma variável do sistema usada pelo sistema operacional para localizar executáveis necessários da linha de comandos ou da janela Terminal
+
+A QueryString é um modelo clássico de manutenção do estado da página. 
+Elas são nada mais do que conjuntos de pares/valores anexados a URL, 
+em diversos sites hoje em dia vemos o uso delas.
+
+Seu uso é simples, após a URL de determinada página, adicionamos o primeiro valor usando a seguinte sintaxe: ?Chave=Valor. 
+Para passarmos mais de um conjunto, os mesmos devem ser concatenados 
+usando o caractere coringa &.
+
+
+O header sao metadados da nossa requisição serve para descrevela
